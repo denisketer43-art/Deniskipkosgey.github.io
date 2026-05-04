@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denis Kipkosgey - International Relations & Diplomacy Professional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #0A1F44;
+            --secondary-gold: #C9A961;
+            --accent-burgundy: #5C1F3A;
+            --text-dark: #1A1A1A;
+            --text-light: #F5F5F5;
+            --cream: #FAF8F3;
+            --light-gold: #E8DCC4;
+            --transition-smooth: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(10, 31, 68, 0.98), rgba(92, 31, 58, 0.98));
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.2rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            transition: var(--transition-smooth);
+        }
+
+        nav.scrolled {
+            padding: 0.8rem 0;
+            background: linear-gradient(135deg, rgba(10, 31, 68, 1), rgba(92, 31, 58, 1));
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary-gold);
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        .logo:hover {
+            color: var(--light-gold);
+            transform: translateY(-2px);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            transition: var(--transition-fast);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-gold);
+            transition: var(--transition-fast);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--accent-burgundy) 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(201, 169, 97, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(201, 169, 97, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            border: 2px solid rgba(201, 169, 97, 0.1);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-subtitle {
+            color: var(--secondary-gold);
+            font-size: 0.95rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 800;
+            color: var(--text-light);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-description {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--light-gold);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .hero-tagline {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 2px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            text-decoration: none;
+            display: inline-block;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: var(--secondary-gold);
+            color: var(--primary-navy);
+        }
+
+        .btn-primary:hover {
+            background: var(--light-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(201, 169, 97, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--secondary-gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary-gold);
+            color: var(--primary-navy);
+            transform: translateY(-3px);
+        }
+
+        .hero-image-container {
+            position: relative;
+            animation: fadeInRight 1s ease-out;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            width: 450px;
+            height: 450px;
+            margin: 0 auto;
+        }
+
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 3px solid var(--secondary-gold);
+            z-index: -1;
+            transition: var(--transition-smooth);
+        }
+
+        .hero-image-wrapper:hover::before {
+            top: -30px;
+            left: -30px;
+            right: 30px;
+            bottom: 30px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%) contrast(1.1);
+            transition: var(--transition-smooth);
+        }
+
+        .hero-image-wrapper:hover .hero-image {
+            filter: grayscale(0%) contrast(1.05);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 8rem 2rem;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition-smooth);
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-subtitle {
+            color: var(--secondary-gold);
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-gold);
+        }
+
+        .section-description {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            opacity: 0.8;
+            max-width: 700px;
+            margin: 2rem auto 0;
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        #about {
+            background: var(--cream);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--text-dark);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-item {
+            padding: 2rem;
+            background: white;
+            border-left: 4px solid var(--secondary-gold);
+            transition: var(--transition-fast);
+        }
+
+        .value-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Highlights Section */
+        #highlights {
+            background: linear-gradient(135deg, var(--primary-navy), var(--accent-burgundy));
+            color: var(--text-light);
+        }
+
+        #highlights .section-title {
+            color: var(--text-light);
+        }
+
+        #highlights .section-subtitle {
+            color: var(--secondary-gold);
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .highlight-card {
+            padding: 3rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(201, 169, 97, 0.2);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--secondary-gold);
+            transform: scaleX(0);
+            transition: var(--transition-fast);
+        }
+
+        .highlight-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .highlight-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-10px);
+            border-color: var(--secondary-gold);
+        }
+
+        .highlight-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-gold);
+        }
+
+        .highlight-card p {
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* Education Section */
+        #education {
+            background: white;
+        }
+
+        .education-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: var(--cream);
+            border-left: 5px solid var(--secondary-gold);
+        }
+
+        .education-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-navy);
+            margin-bottom: 2rem;
+        }
+
+        .education-content p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Experience Section */
+        #experience {
+            background: var(--cream);
+        }
+
+        .experience-timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: var(--secondary-gold);
+        }
+
+        .experience-item {
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .experience-item:nth-child(odd) {
+            padding-right: calc(50% + 3rem);
+        }
+
+        .experience-item:nth-child(even) {
+            padding-left: calc(50% + 3rem);
+        }
+
+        .experience-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 2px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            background: var(--secondary-gold);
+            border: 4px solid var(--cream);
+            border-radius: 50%;
+        }
+
+        .experience-item:nth-child(odd) .experience-card::before {
+            right: -61px;
+        }
+
+        .experience-item:nth-child(even) .experience-card::before {
+            left: -61px;
+        }
+
+        .experience-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card h4 {
+            color: var(--secondary-gold);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .experience-card p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* Skills Section */
+        #skills {
+            background: white;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        .skill-category {
+            background: var(--cream);
+            padding: 3rem 2rem;
+            border-top: 4px solid var(--secondary-gold);
+            transition: var(--transition-smooth);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-category h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--primary-navy);
+            margin-bottom: 2rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(10, 31, 68, 0.1);
+            transition: var(--transition-fast);
+        }
+
+        .skill-list li:hover {
+            padding-left: 10px;
+            color: var(--secondary-gold);
+        }
+
+        /* Research Section */
+        #research {
+            background: linear-gradient(135deg, var(--accent-burgundy), var(--primary-navy));
+            color: var(--text-light);
+        }
+
+        #research .section-title {
+            color: var(--text-light);
+        }
+
+        #research .section-subtitle {
+            color: var(--secondary-gold);
+        }
+
+        .research-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4rem;
+            border: 2px solid rgba(201, 169, 97, 0.3);
+        }
+
+        .research-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--secondary-gold);
+            margin-bottom: 2rem;
+        }
+
+        .research-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--light-gold);
+        }
+
+        .research-card ul {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .research-card li {
+            padding: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        .research-card li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-gold);
+            font-size: 1.2rem;
+        }
+
+        /* Photography Section */
+        #photography {
+            background: var(--cream);
+        }
+
+        .photography-intro {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.9;
+        }
+
+        .photography-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 31, 68, 0.9), transparent);
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: var(--transition-smooth);
+        }
+
+        .photo-item:hover .photo-overlay {
+            transform: translateY(0);
+        }
+
+        .photo-overlay p {
+            color: white;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .photography-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .service-item {
+            background: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 3px solid var(--secondary-gold);
+            transition: var(--transition-fast);
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--primary-navy);
+        }
+
+        /* Volunteering Section */
+        #volunteering {
+            background: white;
+        }
+
+        .volunteering-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .volunteering-intro {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .volunteering-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .volunteer-card {
+            background: var(--cream);
+            padding: 3rem;
+            border-left: 5px solid var(--secondary-gold);
+            transition: var(--transition-smooth);
+        }
+
+        .volunteer-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .volunteer-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .volunteer-card p {
+            line-height: 1.8;
+        }
+
+        .impact-focus {
+            margin-top: 4rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--primary-navy), var(--accent-burgundy));
+            color: white;
+        }
+
+        .impact-focus h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-gold);
+            text-align: center;
+        }
+
+        .impact-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .impact-list li {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-left: 3px solid var(--secondary-gold);
+            font-size: 1.1rem;
+        }
+
+        /* Interests Section */
+        #interests {
+            background: var(--cream);
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .interest-card {
+            background: white;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            border-top: 4px solid var(--secondary-gold);
+            transition: var(--transition-smooth);
+        }
+
+        .interest-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .interest-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--primary-navy);
+            line-height: 1.4;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, var(--primary-navy), var(--accent-burgundy));
+            color: var(--text-light);
+        }
+
+        #contact .section-title {
+            color: var(--text-light);
+        }
+
+        #contact .section-subtitle {
+            color: var(--secondary-gold);
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border: 2px solid rgba(201, 169, 97, 0.3);
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .contact-item h4 {
+            color: var(--secondary-gold);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-item p,
+        .contact-item a {
+            color: white;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        .contact-item a:hover {
+            color: var(--secondary-gold);
+        }
+
+        .contact-cta {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 3rem;
+            border-left: 5px solid var(--secondary-gold);
+        }
+
+        .contact-cta h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-gold);
+        }
+
+        .contact-cta p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-navy);
+            color: var(--text-light);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .hero-image-wrapper {
+                width: 350px;
+                height: 350px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .highlights-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-timeline::before {
+                left: 0;
+            }
+
+            .experience-item:nth-child(odd),
+            .experience-item:nth-child(even) {
+                padding-left: 3rem;
+                padding-right: 0;
+            }
+
+            .experience-item:nth-child(odd) .experience-card::before,
+            .experience-item:nth-child(even) .experience-card::before {
+                left: -61px;
+                right: auto;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .photography-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .volunteering-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .interests-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+            }
+
+            .hero-image-wrapper {
+                width: 280px;
+                height: 280px;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .photography-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .interests-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">DK</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#photography">Photography</a></li>
+                <li><a href="#volunteering">Volunteering</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-subtitle">International Relations & Diplomacy</div>
+                <h1 class="hero-title">Denis Kipkosgey</h1>
+                <p class="hero-description">International Relations and Diplomacy Graduate | Youth Development | Governance and Research Practitioner | Professional Photographer</p>
+                <p class="hero-tagline">Driving impact through policy, community engagement, and visual storytelling.</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Learn More</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="hero-image-wrapper">
+                    <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUA20WhdCOtSkfEnbdLN8NjzmXcLaQ7nraGetb1JsB6fbDVdqTu7n0xEIpxGlmiGFY15ZEBck33Ysm0KYDLPX8sk28ZjgpXy1ojD0sHlD6Xzt3Jnca3SllI7y4ch9rtoWmeJF5uMgs9YLdpTE1R_-GtRwib1rtUPJgrg4FaxUfK3zOmPXLqjZUHH_DdzwBC4OQvL6leWuHF2IfALFQ4KSzZc6MN6RV7vWOlPXhE=w1280" alt="Denis Kipkosgey" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Highlights Section -->
+    <section id="highlights">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">What I Bring</div>
+                <h2 class="section-title">Key Highlights</h2>
+            </div>
+            <div class="highlights-grid">
+                <div class="highlight-card fade-in">
+                    <div class="highlight-icon">🏛️</div>
+                    <h3>Government Experience</h3>
+                    <p>Experience in Government (Ministry of Industry, Trade and Investment. State Department of Trade.)</p>
+                </div>
+                <div class="highlight-card fade-in">
+                    <div class="highlight-icon">📊</div>
+                    <h3>Strategy & Resource Mobilization</h3>
+                    <p>Strategy and Resource Mobilization Intern (Public Service Program) Stationed in Maasai Mara University.</p>
+                </div>
+                <div class="highlight-card fade-in">
+                    <div class="highlight-icon">🔍</div>
+                    <h3>Research & Community Engagement</h3>
+                    <p>Strong background in Research and Community Engagement.</p>
+                </div>
+                <div class="highlight-card fade-in">
+                    <div class="highlight-icon">📸</div>
+                    <h3>Professional Photography</h3>
+                    <p>Professional Photographer with a focus on storytelling.</p>
+                </div>
+                <div class="highlight-card fade-in">
+                    <div class="highlight-icon">🤝</div>
+                    <h3>Volunteer Experience</h3>
+                    <p>Volunteer Experience with humanitarian and community initiatives.</p>
+                </div>
+                <div class="highlight-card fade-in">
+                    <div class="highlight-icon">🎯</div>
+                    <h3>Focus Areas</h3>
+                    <p>Governance | Youth Empowerment | Research | Development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Getting to Know Me</div>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p>I am young Kenyan who is deeply interested in how ideas, people, and institutions can come together to solve real challenges in society. My work and experience have grown from a curiosity about development, governance, and community well being, and a desire to be part of solutions that make systems work better for people.</p>
+                    
+                    <p>Currently, I serve as a Strategy and Resource Mobilization Intern at Maasai Mara University under the Public Service Commission of Kenya, where I support strategic planning, proposal development, partnership building, and project monitoring. I previously gained experience in trade policy and analysis at the Ministry of Industry, Trade and Investment, and developed strong customer service and operations skills in the retail sector at Umoja Shoe Co. Ltd.</p>
+                    
+                    <p>Beyond work, I am committed to community service through volunteering with the Kenya Red Cross, supporting outreach and resilience initiatives. I am especially passionate about inclusion and amplifying the voices of marginalized and indigenous communities.</p>
+                    
+                    <p>My goal is to connect policy, people, and practical solutions to create meaningful and lasting impact.</p>
+                </div>
+                <div class="values-grid fade-in">
+                    <div class="value-item">
+                        <h4>Integrity and Commitment</h4>
+                    </div>
+                    <div class="value-item">
+                        <h4>Youth Empowerment</h4>
+                    </div>
+                    <div class="value-item">
+                        <h4>Community Impact</h4>
+                    </div>
+                    <div class="value-item">
+                        <h4>Inclusive and Sustainable Development</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Academic Background</div>
+                <h2 class="section-title">Education</h2>
+            </div>
+            <div class="education-content fade-in">
+                <h3>Bachelor's Degree in International Relations and Diplomacy</h3>
+                <p>I hold a Bachelor's degree in International Relations and Diplomacy from Pioneer International University. My studies gave me a strong understanding of international relations, foreign policy, governance, diplomacy, political systems, and development. This academic journey helped me understand how institutions operate and how decisions at different levels influence societies.</p>
+                
+                <p>As I progressed in my studies, I specialized in Peace and Security Studies, focusing more deeply on issues such as conflict prevention, peacebuilding, security dynamics, and community and national stability. This specialization added focus to my studies and helped me better understand the practical realities of maintaining peace in different contexts.</p>
+                
+                <p>Overall, my university journey shaped how I think and approach problems. It strengthened my research and analytical skills and deepened my interest in research, public service, governance, and contributing to solutions that support peaceful and sustainable development.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Professional Journey</div>
+                <h2 class="section-title">Experience</h2>
+            </div>
+            <div class="experience-timeline">
+                <div class="experience-item fade-in">
+                    <div class="experience-card">
+                        <h3>Public Service Commission of Kenya (PSCK) – Maasai Mara University</h3>
+                        <h4>Strategy and Resource Mobilization Intern</h4>
+                        <p>I am Strategy and Resource Mobilization Intern in Maasai Mara University under the Public Service Commission. In my current role, I support the development and implementation of the university's strategic plans and performance tracking frameworks. I am involved in identifying funding opportunities and contributing to the preparation of concept notes and grant proposals. I also conduct research and data analysis to guide institutional planning and decision making.</p>
+                        <p>Beyond research, I coordinate stakeholder engagement activities, partnerships, and donor relations to strengthen collaboration between the university and external partners. I assist in preparing reports, briefs, and presentations on resource mobilization progress and project outcomes. Additionally, I participate in monitoring and evaluation activities to ensure that funded projects align with institutional goals and deliver intended impact.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item fade-in">
+                    <div class="experience-card">
+                        <h3>Umoja Shoe Co. Ltd.</h3>
+                        <h4>Retail Operations</h4>
+                        <p>I worked closely with customers to ensure a positive shopping experience, providing support, guidance, and efficient service, which contributed to increased customer satisfaction and repeat visits. I handled transactions, returns, and inventory tracking using POS systems while ensuring accuracy in daily sales operations.</p>
+                        <p>I also supported merchandising and in-store promotions, helping maintain an organized and attractive retail environment. My responsibilities included receiving incoming shipments, unloading delivery trucks, and assisting in stock management. I frequently assisted customers with product inquiries, promotions, and special offers, ensuring they had a smooth and informed shopping experience.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item fade-in">
+                    <div class="experience-card">
+                        <h3>Ministry of Industry, Trade and Investment (State Department of Trade)</h3>
+                        <h4>International Trade Division – Intern</h4>
+                        <p>During my attachment, I participated in trade related research and policy support activities within the International Trade Division. I assisted in the preparation of country position papers for trade negotiations and contributed to the analysis of trade data using statistical tools to support policy insights.</p>
+                        <p>I also supported the dissemination of international trade information to local business communities, helping improve awareness of trade opportunities. In addition, I attended bilateral trade engagements and contributed to discussions on trade policy, gaining firsthand exposure to international trade processes and diplomacy in practice.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item fade-in">
+                    <div class="experience-card">
+                        <h3>Kenya Red Cross Society</h3>
+                        <h4>Volunteer</h4>
+                        <p>I have been actively involved in community outreach and resilience-building initiatives focused on supporting vulnerable populations. My work included assisting in emergency response activities and participating in community service programmes aimed at improving welfare and preparedness.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item fade-in">
+                    <div class="experience-card">
+                        <h3>Community Engagement</h3>
+                        <h4>Community Advocate</h4>
+                        <p>I engaged directly with Maasai communities on social and economic challenges, contributing to awareness and support initiatives. I am also passionate about advocating for inclusion and representation of marginalized and indigenous groups, including the Ogiek community, ensuring their voices are recognized in development conversations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Professional Competencies</div>
+                <h2 class="section-title">Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category fade-in">
+                    <h3>Core Skills</h3>
+                    <ul class="skill-list">
+                        <li>Youth Governance and Policy Analysis</li>
+                        <li>Research and Data Collection</li>
+                        <li>Monitoring and Evaluation (M&E)</li>
+                        <li>Stakeholder Engagement</li>
+                        <li>Resource Mobilization</li>
+                        <li>Strategic Planning</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category fade-in">
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li>Communication and Public Relations</li>
+                        <li>Leadership and Teamwork</li>
+                        <li>Problem Solving</li>
+                        <li>Adaptability</li>
+                        <li>Time Management</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category fade-in">
+                    <h3>Technical Skills</h3>
+                    <ul class="skill-list">
+                        <li>Microsoft Office Suite</li>
+                        <li>Report Writing</li>
+                        <li>Presentation Skills</li>
+                        <li>Digital Communication Tools</li>
+                        <li>POS Systems</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="skill-category fade-in" style="margin-top: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h3>Photography and Visual Media</h3>
+                <ul class="skill-list">
+                    <li>Professional Photography (Events, Community, Documentary)</li>
+                    <li>Photo Editing and Visual Storytelling</li>
+                    <li>Content Creation for Digital Platforms</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Academic Contribution</div>
+                <h2 class="section-title">Research Projects</h2>
+            </div>
+            <div class="research-card fade-in">
+                <h3>Undergraduate Research</h3>
+                <h4>Title: Community Security and Socio-Economic Development in Baringo County</h4>
+                <p>Focus areas:</p>
+                <ul>
+                    <li>Security challenges in communities.</li>
+                    <li>Socio development gaps.</li>
+                    <li>Youth role in peace and stability.</li>
+                    <li>Policy recommendations for improvement.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photography Section -->
+    <section id="photography">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Visual Storytelling</div>
+                <h2 class="section-title">Photography</h2>
+            </div>
+            <div class="photography-intro fade-in">
+                <p>I am also a professional photographer specializing in capturing authentic moments, community engagement, and event documentation. My work focuses on storytelling through visuals, highlighting real life experiences, people, and impactful environments.</p>
+            </div>
+            
+            <div class="photography-grid">
+                <div class="photo-item fade-in">
+                    <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUAjbjPHIwBHLj4QmH6NA9G_isJnnpo5cKuzrqBRHd-kdUzcbPVpZZKTB9yyJjIUbiuAWftg0JWZhgC7_sd-3YZ4dbB5EUpwHjP7VQdS5m28RWwWUfqsvRqVQxr4I1zENZ9l-AjnW3mZWOEJjatQ8FPot735vcnSbg4hrXWzo6h4MghAiptuEXhElxhFJSNlcysgXhTJZPFGyM2SJlVOLHGjMVO6lnIXvw0gAXk=w1280" alt="Youth conversation">
+                    <div class="photo-overlay">
+                        <p>A moment of conversation and connection as young people join discussin on youth led conversations, expressing their commitment.</p>
+                    </div>
+                </div>
+                
+                <div class="photo-item fade-in">
+                    <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUDGnBLVZWVrAiXaHCgUBnLwQ646YuUm4HyKFqsk8uV2uQFXlbCv_JAwp3NBmin8eDxNK5AU9xnzw7kn-odbW11mEFb8B6rm0DRwwPYGzadzlznOlXyNTzSkKx38nPKyTSIiUYBV-2sTU2mn890Rnp1kwT8mi855ss5PGgcig0mTMGhb5wbqhBxblYFc5VD98qhZvXobXtdo6qfn6YPoSZFcD9n1IvqLdzABKwM=w1280" alt="Presentation">
+                    <div class="photo-overlay">
+                        <p>A participant presents ideas during a conversation about youth discussion.</p>
+                    </div>
+                </div>
+                
+                <div class="photo-item fade-in">
+                    <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUAwpfiaknmx4_oZ2EW4K-iTpmOFwL59KPdWqGUjVsUqgwabB-_xfHgePp5o12SDDQ2I8lAI-vVT_5Lu_AjRKEDF0-bZwGZ1mTOFEbejcuppcfejG5K0fOB_ez2qyL_vG8BpuzxW_IC0WwOAHyjRwMaAin4PuC-vqgkY2AdSMqYRb7_BvNpUFq4k8xNK9bndZ-J60wMndHouMlRKU71FFpddPv1fWCyq4IC3yu0=w1280" alt="Church gathering">
+                    <div class="photo-overlay">
+                        <p>Documenting moments of faith, fellowship, and community engagement during a church gathering.</p>
+                    </div>
+                </div>
+                
+                <div class="photo-item fade-in">
+                    <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUA_I6DomklzLL7toffYC9JUfFDzvpLv813kuRJogD4q5gKnHziZEFmi4jHYkn-9fORhOsdfgYi371RWAkt7wJYjR5E_xEb6sTRjFOlKDdxGZktGp1dpOIElXXXV0hirlt3gaB88j-YH7NxMVkHFnODBKfBzfPn2_d9dgiHooQKH6jYQjdjCNhn2mk8pOP00TH24HiHt7VPM73H9PfG21EnM9csaVv1P6k4l=w1280" alt="Church event">
+                    <div class="photo-overlay">
+                        <p>Capturing moments of faith, unity, and involvement in the community during a church event.</p>
+                    </div>
+                </div>
+                
+                <div class="photo-item fade-in">
+                    <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUBc2_wNbuI9ZdFefWKVW0mTbLASs_6dzXkIsDbpvtkXflkYaGvn-z2HbPvR0J8g36imTPr7ph_-bo9r0i12Dyv2nW4T1UKdB5brLQGRcHdYCBpkfBuH2z5aeKym8G7WCAPMXSEcy1TysO2PNaLVu_1J6RV3a7-8XJcHOFgEURZpUkw1K9LnbJab23LRJ-6niU7p6wlsvRmXjMppVaSOVH_egqpmk2drMffD=w1280" alt="Candid moment">
+                    <div class="photo-overlay">
+                        <p>A relaxed moment of an individual smiling while engaging with her phone in a natural setting during a break time of an event as part of a photo dump.</p>
+                    </div>
+                </div>
+                
+                <div class="photo-item fade-in">
+                    <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUB8Fem6-zX-3n6xEg1_rI966L73YxriFCaFT7PqX3T10VyF5SaxbCT4YcyfO7mObgJg4glvSmk0Ys-ncOWkQXcB6donBl78v_32dUnUtoxL_7qHTmofBE9qXhR2izv2SHZwC8DyAXy3ANEncZJ1nJ2cffym0nnb2T18_NIIFcLAx_fZj6pgKLmnIt7hLZBniLGZj8jj1vD91RWnzox-xHu7iaHw4oXJ0gSmxeU=w1280" alt="Sports event">
+                    <div class="photo-overlay">
+                        <p>Capturing the energy and teamwork expressed through youth participation in sports during inter-university friendly games between Pioneer International University and Machakos University.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="max-width: 800px; margin: 4rem auto 0; text-align: center;" class="fade-in">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--primary-navy); margin-bottom: 1.5rem;">My Style</h3>
+                <p style="font-size: 1.1rem; line-height: 1.9;">My approach to photography is centered on authenticity and storytelling. I focus on capturing natural moments rather than staged scenes, ensuring that each image reflects genuine emotion, context, and meaning. I aim to create visuals that not only document events but also communicate deeper narratives about people, community, and impact.</p>
+            </div>
+            
+            <div class="photography-services">
+                <div class="service-item fade-in">
+                    <h4>Community and Development Documentation</h4>
+                </div>
+                <div class="service-item fade-in">
+                    <h4>Portrait Photography</h4>
+                </div>
+                <div class="service-item fade-in">
+                    <h4>Creation for Organizations</h4>
+                </div>
+                <div class="service-item fade-in">
+                    <h4>Nature Photography</h4>
+                </div>
+                <div class="service-item fade-in">
+                    <h4>Event Coverage</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteering Section -->
+    <section id="volunteering">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Community Service</div>
+                <h2 class="section-title">Volunteering and Community Support</h2>
+            </div>
+            <div class="volunteering-content">
+                <div class="volunteering-intro fade-in">
+                    <p>For me, community work is not just something I do, it's something I care deeply about. I believe real impact starts at the grassroots level, by listening to people, understanding their challenges, and working together to find practical solutions.</p>
+                </div>
+                
+                <div class="volunteering-grid">
+                    <div class="volunteer-card fade-in">
+                        <h3>Kenya Red Cross Society</h3>
+                        <p>Through my volunteer work with the Kenya Red Cross Society, I have taken part in humanitarian support activities, including community outreach and emergency response. These experiences taught me how to show up in difficult situations, work with different people, and respond to community needs with both empathy and action.</p>
+                    </div>
+                    
+                    <div class="volunteer-card fade-in">
+                        <h3>Disability Inclusion</h3>
+                        <p>I have also supported disability inclusion at St. Mary's Tachasis School for the Handicapped, where I worked closely with children with special needs. Assisting them in their daily routines and learning activities helped me better understand the importance of patience, care, and creating spaces where everyone feels included and valued.</p>
+                    </div>
+                    
+                    <div class="volunteer-card fade-in">
+                        <h3>Maasai Communities</h3>
+                        <p>In Narok County, I have been actively involved in community outreach and youth engagement within Maasai communities. At the same time, I have been passionate about advocating for the inclusion and recognition of the Ogiek community.</p>
+                    </div>
+                    
+                    <div class="volunteer-card fade-in">
+                        <h3>Community-Led Solutions</h3>
+                        <p>Through these engagements, I have contributed to conversations around socio economic challenges, governance, and youth empowerment, while learning firsthand the value of community led solutions.</p>
+                    </div>
+                </div>
+                
+                <div class="impact-focus fade-in">
+                    <h3>Impact Focus</h3>
+                    <ul class="impact-list">
+                        <li>Youth empowerment</li>
+                        <li>Social inclusion</li>
+                        <li>Community resilience</li>
+                        <li>Peace and development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Passions & Focus</div>
+                <h2 class="section-title">Interests</h2>
+            </div>
+            <div class="interests-grid">
+                <div class="interest-card fade-in">
+                    <h4>Youth Development and Leadership</h4>
+                </div>
+                <div class="interest-card fade-in">
+                    <h4>Climate Action and Environmental Sustainability</h4>
+                </div>
+                <div class="interest-card fade-in">
+                    <h4>Governance and Public Policy</h4>
+                </div>
+                <div class="interest-card fade-in">
+                    <h4>Peacebuilding and Security Studies</h4>
+                </div>
+                <div class="interest-card fade-in">
+                    <h4>International Relations and Diplomacy</h4>
+                </div>
+                <div class="interest-card fade-in">
+                    <h4>Community Development Projects</h4>
+                </div>
+                <div class="interest-card fade-in">
+                    <h4>Resource Mobilization and NGOs</h4>
+                </div>
+                <div class="interest-card fade-in">
+                    <h4>Monitoring and Evaluation</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Let's Connect</div>
+                <h2 class="section-title">Contact</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-grid">
+                    <div class="contact-info fade-in">
+                        <div class="contact-item">
+                            <h4>Email</h4>
+                            <p><a href="mailto:deniskipkosgey@gmail.com">deniskipkosgey@gmail.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+254705740801">+254705740801</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://bit.ly/4e5FbQB" target="_blank">Message on WhatsApp</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Location</h4>
+                            <p>Nairobi, Kenya</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Postal Address</h4>
+                            <p>P.O Box 66-40110, Songhor</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-cta fade-in">
+                        <h3>Let's Connect</h3>
+                        <p>Let's connect for any opportunities: Youth engagement initiatives, governance, research, development, visual storytelling, etc.</p>
+                        <div class="contact-buttons">
+                            <a href="https://drive.google.com/file/d/1SHJFSVks2IqCMx2WDCaSakkyOu4c65m4/view?usp=sharing" target="_blank" class="btn btn-primary" style="text-align: center;">Download CV</a>
+                            <a href="mailto:deniskipkosgey@gmail.com" class="btn btn-secondary" style="text-align: center;">Email Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Denis Kipkosgey. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
